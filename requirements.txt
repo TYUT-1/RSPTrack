@@ -1,0 +1,22 @@
+# Install matching PyTorch and torchvision builds first (see README).
+numpy<2
+pandas
+scipy
+PyYAML
+easydict
+opencv-python
+Pillow
+timm==0.6.13
+lmdb
+jpeg4py
+pycocotools
+scikit-learn
+scikit-image
+tensorboardX
+matplotlib
+tqdm
+six
+ftfy
+regex
+pytorch-pretrained-bert
+git+https://github.com/openai/CLIP.git
