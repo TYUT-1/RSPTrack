@@ -1,4 +1,4 @@
-# RSPTrack: Language-Assisted Visual Tracking with\\ Layer-wise Rectified Sparse Attention
+# RSPTrack: Language-Assisted Visual Tracking with Layer-wise Rectified Sparse Attention
 
 
 
