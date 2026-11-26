@@ -1,4 +1,4 @@
-# Install matching PyTorch and torchvision builds first (see README).
+# Install matching PyTorch and torchvision builds first.
 numpy<2
 pandas
 scipy
