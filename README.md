@@ -8,15 +8,13 @@
 
 Visual object tracking is challenged by occlusion, appearance changes, and similar-object interference. Language offers complementary semantic cues, but text annotations are often incomplete or missing. Existing vision-language joint encoding methods face two challenges: 1) category attributes may be shared by similar objects, while background clutter in templates weakens instance discrimination; 2) unreliable local cues increase reliance on context, yet dense interactions introduce distractions and excessive sparsity discards critical information. We propose RSPTrack, a language-assisted tracking framework integrating pre-fusion target-conditioned modulation with query-specific information selection during joint encoding, so semantic cues influence both search representations and information aggregation. For the first challenge, Target-aware Visual Prompt Modulation (TVPM) combines template foreground appearance and text to generate latent prompts for target, boundary, and background roles, using gated and differential residuals to modulate representations without increasing sequence length. For the second, Layer-wise Rectified Sparse Attention (LRSA) selects relevant key blocks per query while retaining local and essential semantic connections, with periodic dense attention restoring global interactions to recover missed context, balancing focused aggregation with contextual completeness.
 
-![图片描述](asset/framework.png)
+![framework](asset/framework.png)
 
 
 
 #### Experimental Performance
 
-![experiment](asset/experiment)
-
-
+![experiment](asset/experiment.png)
 
 
 
