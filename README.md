@@ -54,7 +54,6 @@ ${RSPTrack_ROOT}
          |-- TRAIN_0
          |-- TRAIN_1
          ...
-         |-- TRAIN_11
          |-- TEST
      -- TNL2K
          -- train
