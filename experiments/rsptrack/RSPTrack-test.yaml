@@ -31,17 +31,17 @@ DATA:
   TRAIN:
     DATASETS_NAME:
     - LASOT
-    - TNL2K_train
-    - GOT10K_vottrain
-    - COCO17
-    - TRACKINGNET
+    # - TNL2K_train
+    # - GOT10K_vottrain
+    # - COCO17
+    # - TRACKINGNET
     DATASETS_RATIO:
     - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    SAMPLE_PER_EPOCH: 60000
+    # - 1
+    # - 1
+    # - 1
+    # - 1
+    SAMPLE_PER_EPOCH: 600 # 60000
   USE_NLP:
     TNL2K: true
     LASOT: false
@@ -71,7 +71,7 @@ MODEL:
       MIN_BLOCKS: 4
       LOCAL_BLOCKS: 1
       START_LAYER: 0
-      RECTIFY_INTERVAL: 2
+      RECTIFY_INTERVAL: 4
       PROTECT_CLS: true
       PROTECT_TEXT: true
   TEXT_ENCODER:
@@ -94,8 +94,8 @@ TRAIN:
   TYPE: text_frozen
   ENCODER_MULTIPLIER: 0.1
   COOP_MULTIPLIER: 1
-  BATCH_SIZE: 32
-  EPOCH: 200
+  BATCH_SIZE: 8 # 32
+  EPOCH: 20
   GRAD_CLIP_NORM: 0.1
   LR: 0.0001
   LR_DROP_EPOCH: 150
@@ -113,7 +113,7 @@ TRAIN:
   CLIP_WITH: cls
   CLIP_TEMP_LEARN: true
 TEST:
-  EPOCH: 200
+  EPOCH: 20
   SEARCH_FACTOR: 4.0
   SEARCH_SIZE: 224
   TEMPLATE_FACTOR: 2.0
