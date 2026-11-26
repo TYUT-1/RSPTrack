@@ -145,7 +145,7 @@ python tracking/analysis_results.py --dataset_name tnl2k
 
 ## Model Zoo
 
-The trained models, and the raw tracking results are provided in [Google Drive](https://drive.google.com/drive/folders/1EUg59VDlZFKopS3Ic3wISEg_cmYdt8ic?usp=sharing)
+The trained models, and the raw tracking results are provided in [Google Drive](https://drive.google.com/drive/folders/1EUg59VDlZFKopS3Ic3wISEg_cmYdt8ic?usp=sharing).
 
 
 
