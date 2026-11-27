@@ -91,15 +91,12 @@ data/
 Run the following command to set paths for this project：
 
 ```bash
-python tracking/create_default_local_file.py --workspace_dir . --data_dir ./data --save_dir .
+python tracking/create_default_local_file.py --workspace_dir . --data_dir ./data --save_dir ./output
 ```
 
-After running this command, you can also modify paths by editing these two files：
+This creates `local_paths.json` in the project root. Training, testing, and evaluation all read this file. 
 
-```bash
-lib/train/admin/local.py  # paths about training
-lib/test/evaluation/local.py  # paths about testing
-```
+`lib/project.py` defines the RSPTrack experiment defaults, and `lib/local_paths.py` provides the shared path settings. 
 
 
 
@@ -111,34 +108,34 @@ Please download the **fast_itpn_base_clipl_e1600.pt** and place them in `./pretr
 You can run the following command to train RSPTrack:
 
 ```bash
-python tracking/train.py --config RSPTrack-B --save_dir ./output --use_lmdb 1
+python tracking/train.py --script rsptrack --config RSPTrack-B --use_lmdb 1
 ```
 
 
 
 #### test and evaluation
 
-First, you need to set the paths for the various evaluation benchmarks in `./lib/test/evaluation/local.py` , and prepare the model weights for evaluation. Then, run the following command to perform evaluation on different benchmarks.
+You can run the following command to test and evaluate RSPTrack:
 
 - LaSOT：
 
 ```bash
-python tracking/test.py tracker_name tracker_param --dataset_name lasot
-python tracking/analysis_results.py --dataset_name lasot
+python tracking/test.py rsptrack RSPTrack-B --dataset_name lasot
+python tracking/analysis_results.py --config RSPTrack-B --dataset_name lasot
 ```
 
 - LaSOT_ext：
 
 ```bash
-python tracking/test.py tracker_name tracker_param --dataset_name lasot_extension_subset
-python tracking/analysis_results.py --dataset_name lasot_extension_subset
+python tracking/test.py rsptrack RSPTrack-B --dataset_name lasot_extension_subset
+python tracking/analysis_results.py --config RSPTrack-B --dataset_name lasot_extension_subset
 ```
 
 - TNL2K：
 
 ```bash
-python tracking/test.py tracker_name tracker_param --dataset_name tnl2k
-python tracking/analysis_results.py --dataset_name tnl2k
+python tracking/test.py rsptrack RSPTrack-B --dataset_name tnl2k
+python tracking/analysis_results.py --config RSPTrack-B --dataset_name tnl2k
 ```
 
 

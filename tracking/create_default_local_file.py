@@ -1,4 +1,4 @@
-"""Configure paths once for training, testing and evaluation."""
+"""Write local_paths.json for RSPTrack training, testing and evaluation."""
 import argparse
 from pathlib import Path
 import _init_paths

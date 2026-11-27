@@ -1,22 +1,43 @@
-# Install matching PyTorch and torchvision builds first.
-numpy<2
-pandas
-scipy
-PyYAML
-easydict
-opencv-python
-Pillow
+# Target environment: Linux, Python 3.8.20
+
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+torch==2.4.1+cu118
+torchvision==0.19.1+cu118
+
+# Numerical computing
+numpy==1.23.5
+pandas==2.0.3
+scipy==1.10.1
+scikit-learn==1.3.2
+scikit-image==0.21.0
+
+# Configuration
+PyYAML==6.0.2
+easydict==1.13
+
+# Images and datasets
+opencv-python==4.8.1.78
+Pillow==10.4.0
+lmdb==1.4.1
+jpeg4py==0.1.4
+pycocotools==2.0.7
+
+# Model components
 timm==0.6.13
-lmdb
-jpeg4py
-pycocotools
-scikit-learn
-scikit-image
-tensorboardX
-matplotlib
-tqdm
-six
-ftfy
-regex
-pytorch-pretrained-bert
-git+https://github.com/openai/CLIP.git
+pytorch-pretrained-bert==0.6.2
+
+# CLIP dependencies and fixed source revision
+ftfy==6.1.3
+regex==2024.9.11
+clip @ https://codeload.github.com/openai/CLIP/zip/a1d071733d7111c9c014f024669f959182114e33
+
+# Logging and evaluation
+tensorboard==2.14.0
+tensorboardX==2.6.2.2
+matplotlib==3.7.5
+tqdm==4.66.5
+six==1.16.0
+
+# Optional: per-sequence evaluation exported to XLS
+# xlwt==1.3.0
